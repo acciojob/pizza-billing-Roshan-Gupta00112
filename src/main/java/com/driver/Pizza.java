@@ -16,8 +16,14 @@ public class Pizza {
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         // your code goes here
-        if(isVeg)this.price+=300;
-        else this.price+=400;
+        if(isVeg){
+            this.price+=300;
+            this.bill="Base Price Of The Pizza: 300" + "\n";
+        }
+        else {
+            this.price+=400;
+            this.bill="Base Price Of The Pizza: 400" + "\n";
+        }
 
         isCheeseAdded=false;
         isToppingsAdded=false;
@@ -60,6 +66,7 @@ public class Pizza {
         if(!isCheeseAdded){
             this.price+=80;
             isCheeseAdded=true;
+            this.bill+="Extra Cheese Added: 80" + "\n";
         }
     }
 
@@ -67,8 +74,14 @@ public class Pizza {
         // your code goes here
         if(isCheeseAdded){
             if(!isToppingsAdded) {
-                if(isVeg)this.price+=70;
-                else this.price+=120;
+                if(isVeg){
+                    this.price+=70;
+                    this.bill+= "Extra Toppings For Veg Pizza = 70" + "\n";
+                }
+                else {
+                    this.price+=120;
+                    this.bill+= "Extra Toppings For Non-veg Pizza = 120" + "\n";
+                }
                 isToppingsAdded=true;
             }
         }
@@ -79,20 +92,13 @@ public class Pizza {
         if(!isTakeAway){
             this.price+=20;
             isTakeAway=true;
+            this.bill+="Paper bag Price = 20" + "\n";
         }
     }
 
     public String getBill(){
         // your code goes here
-        if(isVeg) System.out.println("Base Price Of The Pizza: 300");
-        else System.out.println("Base Price Of The Pizza: 400");
-
-        if(isCheeseAdded) System.out.println("Extra Cheese Added: 80");
-        if(isToppingsAdded) {
-            if(isVeg) System.out.println("Extra Toppings For Veg Pizza = 70");
-            else System.out.println("Extra Toppings For Non-veg Pizza = 120");
-        }
-        if(isTakeAway) System.out.println("Paper bag Price = 20");
-        return "Total Price: " +this.price;
+        this.bill+="Total Price: " +this.price;
+        return this.bill;
     }
 }
