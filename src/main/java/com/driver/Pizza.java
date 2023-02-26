@@ -46,61 +46,61 @@ public class Pizza {
         return price;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
-    }
+//    public void setPrice(int price) {
+//        this.price = price;
+//    }
 
-    public Boolean getVeg() {
-        return isVeg;
-    }
+//    public Boolean getVeg() {
+//        return isVeg;
+//    }
 
-    public void setVeg(Boolean veg) {
-        isVeg = veg;
-    }
+//    public void setVeg(Boolean veg) {
+//        isVeg = veg;
+//    }
 
-    public void setBill(String bill) {
-        this.bill = bill;
-    }
+//    public void setBill(String bill) {
+//        this.bill = bill;
+//    }
 
-    public int getToppings() {
-        return toppings;
-    }
-
-    public void setToppings(int toppings) {
-        this.toppings = toppings;
-    }
-
-    public boolean isExtraCheeseAdded() {
-        return isExtraCheeseAdded;
-    }
-
-    public void setExtraCheeseAdded(boolean extraCheeseAdded) {
-        isExtraCheeseAdded = extraCheeseAdded;
-    }
-
-    public boolean isExtraToppingAdded() {
-        return isExtraToppingAdded;
-    }
-
-    public void setExtraToppingAdded(boolean extraToppingAdded) {
-        isExtraToppingAdded = extraToppingAdded;
-    }
-
-    public boolean isTakeAway() {
-        return isTakeAway;
-    }
-
-    public void setTakeAway(boolean takeAway) {
-        isTakeAway = takeAway;
-    }
-
-    public boolean isBillCreated() {
-        return isBillCreated;
-    }
-
-    public void setBillCreated(boolean billCreated) {
-        isBillCreated = billCreated;
-    }
+//    public int getToppings() {
+//        return toppings;
+//    }
+//
+//    public void setToppings(int toppings) {
+//        this.toppings = toppings;
+//    }
+//
+//    public boolean isExtraCheeseAdded() {
+//        return isExtraCheeseAdded;
+//    }
+//
+//    public void setExtraCheeseAdded(boolean extraCheeseAdded) {
+//        isExtraCheeseAdded = extraCheeseAdded;
+//    }
+//
+//    public boolean isExtraToppingAdded() {
+//        return isExtraToppingAdded;
+//    }
+//
+//    public void setExtraToppingAdded(boolean extraToppingAdded) {
+//        isExtraToppingAdded = extraToppingAdded;
+//    }
+//
+//    public boolean isTakeAway() {
+//        return isTakeAway;
+//    }
+//
+//    public void setTakeAway(boolean takeAway) {
+//        isTakeAway = takeAway;
+//    }
+//
+//    public boolean isBillCreated() {
+//        return isBillCreated;
+//    }
+//
+//    public void setBillCreated(boolean billCreated) {
+//        isBillCreated = billCreated;
+//    }
 
 
 
@@ -109,7 +109,7 @@ public class Pizza {
         // your code goes here
         if(!isExtraCheeseAdded){
             this.price+=80;
-            isExtraCheeseAdded=true;
+            isExtraCheeseAdded=true;  // to avoid adding repeatedly
             //this.bill+="Extra Cheese Added: 80" + "\n";
         }
     }
@@ -148,7 +148,7 @@ public class Pizza {
             if (isExtraCheeseAdded) this.bill += "Extra Cheese Added: 80" + "\n";
             if (isExtraToppingAdded) this.bill += "Extra Toppings Added: " + this.toppings + "\n";
             if (isTakeAway) this.bill += "Paperbag Added: 20" + "\n";
-            this.bill += "Total Price: " + this.price;
+            this.bill += "Total Price: " + this.price +"\n";
             isBillCreated=true;
         }
 

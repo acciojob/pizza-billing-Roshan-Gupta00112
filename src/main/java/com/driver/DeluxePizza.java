@@ -9,7 +9,7 @@ public class DeluxePizza extends Pizza {
 //        super.addExtraToppings();
         addExtraCheese();
         addExtraToppings();
-        super.setExtraCheeseAdded(false);
-        super.setExtraToppingAdded(false);   // No Extra Cheese & Topping will be given to Deluxe Pizza
+//        super.setExtraCheeseAdded(false);
+//        super.setExtraToppingAdded(false);   // No Extra Cheese & Topping will be given to Deluxe Pizza
     }
 }
